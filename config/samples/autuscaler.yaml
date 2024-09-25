@@ -1,0 +1,10 @@
+apiVersion: scaling.example.com/v1
+kind: AutoScaler
+metadata:
+  name: my-autoscaler
+spec:
+  targetDeployment: my-deployment
+  targetMetric: custom_metric
+  minReplicas: 1
+  maxReplicas: 10
+
