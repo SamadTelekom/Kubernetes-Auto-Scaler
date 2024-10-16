@@ -1,21 +1,31 @@
-# kubernetes-auto-scaler
-// TODO(user): Add simple overview of use/purpose
+# Kubernetes Auto-Scaler
 
-## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+Der **Kubernetes Auto-Scaler** ist ein Operator, der entwickelt wurde, um die Skalierung von Kubernetes-Anwendungen zu automatisieren. Er überwacht die Ressourcennutzung und passt die Anzahl der Pod-Instanzen entsprechend an, um eine optimale Leistung und Effizienz zu gewährleisten. Dies erleichtert die Verwaltung von Anwendungen in Kubernetes-Umgebungen erheblich und sorgt dafür, dass Ressourcen nur nach Bedarf verwendet werden.
+
+## Beschreibung
+
+Der Kubernetes Auto-Scaler automatisiert die Skalierung von Anwendungen innerhalb eines Kubernetes-Clusters. Durch die Verwendung von **Custom Resource Definitions (CRDs)** ermöglicht dieser Operator es Benutzern, ihre Anwendungen flexibel und effizient zu skalieren. Der Auto-Scaler analysiert kontinuierlich die aktuellen Ressourcenanforderungen und passt die Anzahl der Pods an, um den definierten Zielzustand zu erreichen. Dies verbessert die Leistung und Verfügbarkeit von Anwendungen und reduziert gleichzeitig die Betriebskosten.
+
+### Hauptfunktionen
+
+- **Automatische Skalierung**: Erhöht oder verringert die Anzahl der Pods basierend auf der aktuellen Last.
+- **Einfache Integration**: Leicht zu implementieren und in bestehende Kubernetes-Umgebungen zu integrieren.
+- **Benutzerdefinierte Einstellungen**: Unterstützung von benutzerdefinierten Metriken zur Skalierung von Pods.
 
 ## Getting Started
 
-### Prerequisites
-- go version v1.22.0+
-- docker version 17.03+.
-- kubectl version v1.11.3+.
-- Access to a Kubernetes v1.11.3+ cluster.
+### Voraussetzungen
 
-### To Deploy on the cluster
-**Build and push your image to the location specified by `IMG`:**
+- Go Version v1.22.0+
+- Docker Version 17.03+
+- kubectl Version v1.11.3+
+- Zugriff auf ein Kubernetes v1.11.3+ Cluster
 
-```sh
+### Bereitstellung im Cluster
+
+**Bauen und pushen Sie Ihr Image an den im `IMG` angegebenen Speicherort:**
+
+```bash
 make docker-build docker-push IMG=<some-registry>/kubernetes-auto-scaler:tag
 ```
 
